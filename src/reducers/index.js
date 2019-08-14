@@ -15,6 +15,7 @@ export const  initialState = {
     ]
   };
 
-  export const Reducer =  (state, action)=> {
-      return state;
+  export const Reducer =  (state = initialState, action)=> {
+    console.log('state',state) 
+    return state;
   }
