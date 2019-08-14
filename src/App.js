@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { connect } from 'react-redux';
 import { Reducer } from './reducers'
 
 import Header from './components/Header';
@@ -26,7 +26,7 @@ const App = ({ store }) => {
         <AddedFeatures car={store.car} />
       </div>
       <div className="box">
-        <AdditionalFeatures store={store} />
+        <AdditionalFeatures store={store.addons} />
         <Total car={store.car} additionalPrice={store.additionalPrice} />
       </div>
     </div>
