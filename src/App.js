@@ -1,5 +1,4 @@
 import React from 'react';
-import { createStore } from 'redux'
 
 import { Reducer } from './reducers'
 
@@ -8,8 +7,8 @@ import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 
-const store = createStore(Reducer);
-const App = () => {
+
+const App = ({ store }) => {
  
 
   const removeFeature = item => {
@@ -23,8 +22,8 @@ const App = () => {
   return (
     <div className="boxes">
       <div className="box">
-        <Header car={state.car} />
-        <AddedFeatures car={state.car} />
+        <Header car={store.car} />
+        <AddedFeatures car={store.car} />
       </div>
       <div className="box">
         <AdditionalFeatures store={store} />
