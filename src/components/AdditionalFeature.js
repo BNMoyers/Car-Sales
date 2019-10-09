@@ -10,5 +10,9 @@ const AdditionalFeature = props => {
     </li>
   );
 };
-
-export default connect(null, {})(AdditionalFeature);
+const mapStateToProps = state => {
+  return{
+    store: state.store
+  }
+  }
+export default connect(mapStateToProps, {})(AdditionalFeature)
